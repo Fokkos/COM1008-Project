@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--Included comments for all common elements on this page, as there is little 
+to no deviation on the elements and so it seemed pointless to include on every 
+page.-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="James March, 2021" />
+        <!--Normalize is used to ensure the website acts the same across 
+            different browsers-->
+        <link rel="stylesheet" href="./css/normalize.css">
+        <!--site.css contains CSS elements that are used for the whole site-->
+        <link rel="stylesheet" href="./css/site.css">
+        <!--The favicon is set here and uses an ico in the media directory-->
+        <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+        <title>James' Games</title>
+    </head>
+    <body>
+        <!--Dark Mode is enables using the following-->
+        <!--<a> is used as it allows the image to be clicked-->
+        <a class = "darkToggle" onclick ="darkToggle()">
+            <img src="./media/darkIcon.png" alt="Dark mode icon" 
+            class = "darkToggleIcon" id = "darkToggleIcon">
+        </a>
+        <script src="./js/darkMode.js"></script>
+        <!--titleHolder is used to apply styles to the background where the
+        dark mode icon and the logo are-->
+        <div class="titleHolder" id = "titleHolder">
+            <div class="title">
+                <!--Clicking on the logo takes user back to index-->
+                <a href = 'index.html'><img src='./media/logo.svg' 
+                    alt="James' Games logo" id='logo'/></a> 
+            </div>
+            
+        </div>
+        <!--The navbar has its own JS script-->
+        <script src="./js/menu.js"></script>
+        
+        <nav class="navbar" id="navbar">
+            <!--Active class denotes that it will be the element shown when the
+            menu is closed in mobile mode-->
+            <a href="index.html" class="active" id="active">Home</a>
+            <a href="founders.html" class="navbarItem">Founders</a>
+            <a href="contact.html" class="navbarItem">Contact</a>
+            <a href="news.html" class="navbarItem">News</a>
+            <a href="accessibility.html" class="navbarItem">Accessibility</a>
+            <a href="game.html" class="navbarItem">Game</a>
+            <!--Clicking on this icon makes the menu expand using a JS script-->
+            <a class="icon" id = "menuIcon" onclick="expandMenu()">☰</a>
+        </nav>  
+        <!--pageName denotes how the title for each page is styled-->
+        <div class="pageName">
+            <h1 id="pageName">Home</h1>
+        </div>
+        <!--Content divs are used to display text on this website
+        It follows the format set out in the design doc and essentially
+        overlays the h1 and p elements over eachother to achieve the look
+        I was going for. The compromise for this is that you can only have
+        one paragraph per div meaning you have to make use of <br> tags to add 
+        paragraphs, which didnt cause any problems in the end -->
+        <div class="content">
+            <h1 class="contentH1">What is James' Games?</h1>
+            <p class="contentP">
+                <img class="rightImage" src="./media/logo.png" 
+                    alt="company logo">
+                James' Games is a small indie web-based game 
+                development company based in Sheffield in the United Kingdom. 
+                Founded in 2021 by James March and Daniel Hebert, we aim to 
+                develop games for younger generations to assist with learning, 
+                particularly when it comes to vocabulary and pattern 
+                recognition.<br><br>
+                
+                We are a small team currently consisting of 3 members and have 
+                been working as a team on many projects, one of them being 
+                publicly available. We are a creative group with plenty of ideas 
+                for projects going forward and look to keep working our goals 
+                and plans throughout the next few years..<br><br>
+
+                As a group, we are looking forward to everyone being able to get 
+                their hands on our new releases when they release and cannot 
+                wait to hear feedback from everyone and keep working on what 
+                makes us successful. 
+            </p>
+        </div>
+        <div class="content">
+            <h1 class="contentH1">What do we make?</h1>
+            <p class="contentP">
+                <img class="leftImage" alt="Screenshot of our game"
+                    src="./media/news/gameScreenshot.jpg">
+                Our primary focus as a company is creating simple JavaScript 
+                games, primarily and firstly built for mobile devices. The games 
+                are all simple and lightweight meaning that all games can run on 
+                almost every device as well as meaning that the games do not 
+                require a lot of internet usage so works well if you have datacaps 
+                or any other limiting factors.<br><br>
+
+                Our main ain with these games is to provide a simple and easy 
+                way for parents, teachers or even children themselves to have a 
+                simple, accessible and engaging way to learn on their mobile or 
+                desktop devices, all from within whatever web browser they 
+                happen to use. Whilst simple, the games offer an intuative way 
+                to learn shapes and animals and much more (in the future!) all 
+                without having to download any additional applications.<br><br>
+
+                An example of the products that we aim to build can be found on 
+                our Game Demo page which is a simple 
+                JavaScript canvas game where a user must input their name, and 
+                then must select from the items desiplayed on the canvas the 
+                corresponding item that the user is asked to. With this game the 
+                user can learn different shapes, animals, hand-eye coordination 
+                as well as a simple positive feedback loop. 
+                We hope that anyone using our products enjoys themselves and we 
+                welcome any feedback through our 
+                contact page!
+            </p>
+        </div>
+        <!--The footer contains a disclaimer with copyright information-->
+        <footer class="disclaimer">
+            Disclaimer: All stories on this website are ficticious<br> 
+            All images were taken by James March<br> 
+            All images and stories have been approved by those involved<br>
+            James March 2021
+        </footer>
+    </body> 
+</html>

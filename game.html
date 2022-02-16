@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="James March, 2021" />
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/site.css">
+        <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+        <!--game.css contains CSS exclusive to the game page
+        pointless to load on other pages-->
+        <link rel="stylesheet" href="./css/game.css">
+        <title>Game Demo - James' Games</title>
+    </head>
+    <body>
+        <a class = "darkToggle" onclick ="darkToggle()">
+            <img src="./media/darkIcon.png" alt="Dark mode icon" 
+            class = "darkToggleIcon" id = "darkToggleIcon">
+        </a>
+        <!--Special darkMode JS file as the game has elements specific to 
+            itself that cannot be accounted for on other pages-->
+        <script src="./js/darkModeGame.js"></script>
+        <div class="titleHolder" id = "titleHolder">
+            <div class="title">
+                <a href = 'index.html'><img src='./media/logo.svg' 
+                    alt="James' Games logo" id='logo'/></a> 
+            </div>
+        </div>
+        <script src="./js/menu.js"></script>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="active" id="active">Home</a>
+            <a href="founders.html" class="navbarItem">Founders</a>
+            <a href="contact.html" class="navbarItem">Contact</a>
+            <a href="news.html" class="navbarItem">News</a>
+            <a href="accessibility.html" class="navbarItem">Accessibility</a>
+            <a href="game.html" class="navbarItem">Game</a>
+            <a class="icon" id = "menuIcon" onclick="expandMenu()">☰</a>
+        </nav>   
+        <div class="pageName">
+            <h1 id="pageName">Game Demo</h1>
+        </div>
+        <div class="content">
+            <h1 class="contentH1">What is this</h1>
+            <p class="contentP">This game is a demonstration of the type of 
+                JavaScript games that we make at this company.<br><br>
+                
+                You must first enter your name into the textbox, and then after 
+                submitting, click on the image that you are prompted to.<br><br>
+                
+                Aim for 3/3!</p>
+        </div>  
+        <!--game feedback is used to display what image should be chosen-->
+        <p id="gameFeedback" class="gameFeedback"> </p>
+        <!--feedback is the screenthat shows up when you answer a question-->
+        <div class = "feedback" id="feedback"> 
+            <p id="questionFeedback" class="questionFeedback"> </p>
+            <p id="questionFeedbackTwo" class="questionFeedbackTwo"></p>
+            <!--The buttons change depending on where in the game you are-->
+            <!--And link to appropriate JS functions-->
+            <button class="nextQuestion" id="nextQuestion" 
+                onclick="startGame()">Next Question</button>
+            <button class="endGame" id="endGame" 
+                onclick="endGame(name)">End game</button>
+            <button class="reset" id="reset" onclick="reset()">reset</button>
+        </div> 
+        <div class="Game"> 
+            <!--gameInput is where the user inputs their name-->
+            <div class="gameInput" id="gameInput">
+                <p>Enter your name!
+                <!--maxlength 12 to prevent injection of code-->
+                <input type="text" id="name" required maxlength="12">
+                <button class="gameInputSubmit" 
+                    onclick="startGame()">Submit</button>
+                </p>
+            </div>
+            <!--Canvas 300 wide to fit on any mobile device-->
+            <canvas id="canvas" width="300" height="600"></canvas>  
+            <script src="./js/game.js"></script>   
+            <br><br><br>     
+        </div>  
+        
+        <footer class="disclaimer">
+            Disclaimer: All stories on this website are ficticious<br> 
+            All images were taken by James March<br> 
+            All images and stories have been approved by those involved<br>
+            James March 2021
+        </footer>
+    </body>
+</html>

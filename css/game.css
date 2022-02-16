@@ -1,0 +1,18 @@
+/*CSS file for the game-specific elements*/
+/*Author: James March, 2021*/
+
+.feedback{ /*Made to be ~ the same size as the canvas for a seamless experience*/
+    width: 302px;
+    height: 600px;
+    padding: 1% 2.5% 1% 2.5%;
+    background: lightgray;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: none; /*Initially hidden as there is no feedback yet*/
+}
+  
+#canvas { /*Gives the canvas a nice looking border to make it stand out*/
+    background: #f0f0f0;
+    border-radius: 10px;
+    border: 2px solid black;
+}

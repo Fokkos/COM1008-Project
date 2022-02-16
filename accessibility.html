@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="James March, 2021" />
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/site.css">
+        <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+        <title>Accessibility - James' Games</title>
+    </head>
+    <body>
+        <a class = "darkToggle" onclick ="darkToggle()">
+            <img src="./media/darkIcon.png" alt="Dark mode icon" 
+            class = "darkToggleIcon" id = "darkToggleIcon">
+        </a>
+        <script src="./js/darkMode.js"></script>
+        <div class="titleHolder" id = "titleHolder">
+            <div class="title">
+                <a href = 'index.html'><img src='./media/logo.svg' 
+                    alt="James' Games logo" id='logo'/></a> 
+            </div>
+        </div>
+        <script src="./js/menu.js"></script>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="active" id="active">Home</a>
+            <a href="founders.html" class="navbarItem">Founders</a>
+            <a href="contact.html" class="navbarItem">Contact</a>
+            <a href="news.html" class="navbarItem">News</a>
+            <a href="accessibility.html" class="navbarItem">Accessibility</a>
+            <a href="game.html" class="navbarItem">Game</a>
+            <a class="icon" id = "menuIcon" onclick="expandMenu()">☰</a>
+        </nav>   
+        <div class="pageName">
+            <h1 id="pageName">Accessibility</h1>
+        </div>
+        <!--Content for this page shows seperated divs for each feature-->
+        <div class="content">
+            <h1 class="contentH1">Alt-Text</h1>
+            <p class="contentP">
+                For all images on the website, we are going to 
+                include alternative text that will be readable to screen 
+                readers. This means that users who are visually impaired will be 
+                able to access the website and get all of the information that a 
+                user with full vision would be able to.</p>
+        </div>
+        <div class="content">
+            <h1 class="contentH1">Dyslexia-Friendly fonts</h1>
+            <p class="contentP">All text on the website will be printed in a 
+                dyslexia-friendly fonts (Arial for paragraph text and Verdana 
+                for Headers) so that any dyslexic user will have minimal issues 
+                when it comes to reading all information on the company.</p>
+        </div>
+        <div class="content">
+            <h1 class="contentH1">Navigation via alt-button</h1>
+            <p class="contentP">The website will be fully accessible through the 
+                use of the ALT button to access every element (excluding the JS 
+                game as canvas cannot be made to do that). This means that users 
+                who cannot use mice will have the full experience.</p>
+        </div>
+        <div class="content">
+            <h1 class="contentH1">Colour adjustment</h1>
+            <p class="contentP">The website will include a toggle-able dark mode 
+                which will change the colours of the website to a more dark 
+                tone. It reduces any eye-straining bright light and means that 
+                users in low-light situations will be able to see the website 
+                easier. You can try it out by clicking the crescent icon in
+                the top right of the page!</p>
+        </div>
+        <footer class="disclaimer">
+            Disclaimer: All stories on this website are ficticious<br> 
+            All images were taken by James March<br> 
+            All images and stories have been approved by those involved<br>
+            James March 2021
+        </footer>
+    </body>
+</html>

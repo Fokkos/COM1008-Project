@@ -1,0 +1,283 @@
+/*CSS file for the generic site elements*/
+/*Author: James March, 2021*/
+
+* { 
+    box-sizing: border-box;
+}
+
+body{
+  background-color: white;
+}
+
+html, body {
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+body, .titleHolder{ /*Aligns all items in the body into a column*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleHolder{ /*Defines styling for the background where the logo is*/
+    width:100%;
+    background-color: #3999c1;
+    padding: 2%;
+}
+
+#logo{ /* The sizing for the logo at the top of the webpage*/
+    height:100px;
+    filter:invert(100%); /*Makes the logo white!*/
+    /*This is used more for dark mode testing*/
+}
+
+h1{
+  font-family: Verdana;/*Dyslexia friendly!*/
+  font-weight: bold;
+}
+
+p{
+  font-family: Arial; /*Dyslexia friendly!*/
+}
+
+.content, .pageName{ /*Defines how content divs and page titles are alligned*/
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageName{ 
+  margin-top:-20px;
+  font-family: Verdana; /*Dyslexia bold-ish looking font!*/
+}
+
+.content{
+  width:80%;
+  margin-top: -38px;
+  margin-bottom: 20px;
+}
+
+.content p, .content h1{
+  border-radius: 15px;
+  width:100%;
+  border:2px solid #132e3a;
+}
+
+.content h1{
+  background-color: #3999c1;
+  padding: 1.5%;
+  text-align: center;
+}
+
+/*The strange padding for the content is so that the heading and paragraphs
+overlap to create the effect that I set out in the design doc, and it works well
+both for desktop and mobile!*/
+
+.content p{
+  background-color: #bcebff;
+  margin-top: -55px; 
+  padding: 2.5%;
+  padding-top: 40px;
+  text-align: left;
+  position: relative;
+  z-index: -1;
+}
+
+.disclaimer{ /*Defines how copyright disclaimer looks in footer*/
+  background-color: lightgray;
+  font-size: .6em;
+  font-family: Arial;
+  margin-top: -20px;
+  padding: 5px;
+}
+
+.rightImage{ /*Images that will be positioned on the right of a content div*/
+  float: right;
+  border: 2px solid black;
+  width:20%;
+  margin-left: 5px;
+}
+
+.leftImage{ /*Images that will be positioned on the left of a content div*/
+  float: left;
+  border: 2px solid black;
+  width:20%;
+  margin-right: 5px;
+}
+
+.emailForm{ /*Following few are how the contact form is styled*/
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 15px;
+  border:2px solid gray;
+  width: 80%;
+}
+
+.emailForm input[type=text], select { /*Where the name is inputted*/
+  width: 100%;
+  max-width: 800px;
+  padding: 12px 20px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid rgb(194, 190, 190);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.emailForm input[type=email], select { /*where the email is inputted*/
+  width: 100%;
+  max-width: 800px;
+  padding: 12px 20px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid rgb(194, 190, 190);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.emailForm textarea { /*where the message is inputted*/
+  width: 100%;
+  max-width: 800px;
+  padding: 12px 20px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid rgb(194, 190, 190);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.emailForm p{ 
+  font-weight: bold;
+}
+
+.emailForm input[type=submit] { /*Changes how submit button looks*/
+  width: 70%;
+  max-width: 560px;
+  background-color: #3999c1;
+  color: white;
+  padding: 14px 20px;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.emailForm input[type=submit]:hover { /*Changes colour when hovered over*/
+  background-color: #3484a7;
+}
+
+.emailForm input[type=reset] {/*Changes how reset button looks*/
+  width: 28%;
+  max-width: 235px;
+  background-color: #298a46;
+  color: white;
+  padding: 14px 20px;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.emailForm input[type=reset]:hover { /*Changes colour when hovered over*/
+  background-color: #1a691e;
+}
+
+nav{
+  font-family: Verdana;
+  font-weight: bold;
+  width:100%;
+}
+
+.navbar{ /*Defines properties for the navbar in every situation*/
+    background-color: #bcebff;
+    width:100%;
+    overflow: hidden; /*Makes it so that if somehow the navbar overflows, it does not ruin the look*/
+    /* This should be impossible however because of the sizing and spacing of elements, more of just a precaution*/
+}
+
+.navbar a { /*Defines how the elements in the navbar should appear, both for mobile and desktop*/
+    float: left;
+    display: block;
+    font-weight: bold;
+    color: black;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none; /*removes underlines from links*/
+    font-size: 1.05em; 
+  }
+
+.navbar a:hover { /*Defines how a navbar element looks upon a mouse / touch hovering over it */
+    background-color: #3999c1;
+    color: white;
+  }
+
+
+.navbar .icon, .reset{ /*The menu icon should not show in desktop view*/
+    display: none;
+  }
+
+.icon, .darkToggle{
+  cursor: pointer;
+}
+
+.darkToggleIcon{ /*The eclipse icon to toggle dark mode!*/
+  min-width: 50px;
+  width: 5%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+@media screen and (max-width: 422px){ /*size where formatting breaks on mobile*/
+  .content h1{
+    font-size: 1.7em;
+  }
+  .content p{
+    padding-top: 30px;
+    margin-top: -40px;
+  }
+}/*works until width=360px which is the smallest size we need to account for */
+
+@media screen and (max-width: 600px) { /*When in the mobile variation, only the 
+                                first element should show alongside menu icon*/
+  .content, .emailForm{ /*Make width of content  smaller so its more readable*/
+    width:95%;
+  }
+
+  .rightImage, .leftImage{
+    width: 40%;
+  }
+
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon { /*Display the menu icon to the right of the single element*/
+    display: block;
+    float: right;
+  }
+  /*Once the navbar menu icon has been clicked...*/
+  .navbar.open {
+    position: relative;
+  }
+  .navbar.open a.icon { /*Display the navbar icon in the absolute top right of the menu*/
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.open a { /*And have all navbar elements appear descending down the page*/
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
